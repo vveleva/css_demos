@@ -254,7 +254,7 @@ animation: animate-y 5s infinite linear;
   -ms-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   -o-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   transform: translate(-50%, -50%) translate3d(0px, 0, 0);
-  border-bottom: black 1px solid;
+  border-bottom: blue 1px solid;
   color: blue;
   top: 50%;
   left: 50%;
