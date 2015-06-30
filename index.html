@@ -117,7 +117,7 @@
       CSS:
       <pre><code class="language-css">
     .rotate-x {
-      perspective: 200px;
+      perspective: 300px;
       -webkit-animation: animate-x 5s infinite linear;
       animation: animate-x 5s infinite linear;
     }
@@ -181,6 +181,33 @@
       0%   { transform: rotateX(0); }
       100% { transform: rotateX(360deg); }
     }
+
+    /* same for y and z */</code></pre>
+  </div>
+    <br><br><br>
+
+		</div>
+	</section>
+
+  <section id="modal" class="white">
+    <div class="content">
+      <h2 class="margin-40">3D rotation</h2>
+
+      <div id="logos">
+      <a id="cube" href="https://developer.mozilla.org/en/HTML/HTML5">
+          <img src="octocat-black-120.png" id="front">
+          <img src="octocat-black-120.png" id="back">
+          <span id="xaxis">x</span>
+          <span id="yaxis">y</span>
+          <span id="zaxis">z</span>
+      </a>
+    </div>
+
+      <br><br><br>
+      <button class="toggle-code my-button-light">show code</button>
+      <div class="my-code">
+      CSS:
+      <pre><code class="language-css">
 
     /* same for y and z */</code></pre>
   </div>
