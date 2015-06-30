@@ -1,37 +1,20 @@
 .reference a { text-decoration: none; }
 .reference a:hover { color: cornflowerblue; }
 
-.rotate-group {
-  position: relative;
-}
-
+.rotate-group { position: relative; }
 
 .perspective { perspective: 300px; }
-
-/*.rotate-x {
-  -webkit-transform: rotateX(360deg);
-  transform: rotateX(360deg);
-}*/
 
 .rotate-group:hover .rotate-x {
   -webkit-animation: animate-x 5s infinite linear;
   animation: animate-x 5s infinite linear;
 }
 
-/*.rotate-y {
-  -webkit-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}*/
-
 .rotate-group:hover .rotate-y {
   -webkit-animation: animate-y 5s infinite linear;
   animation: animate-y 5s infinite linear;
 }
 
-/*.rotate-z {
-  -webkit-transform: rotateZ(360deg);
-  transform: rotateZ(360deg);
-}*/
 .rotate-group:hover .rotate-z {
   -webkit-animation: animate-z 5s infinite linear;
   animation: animate-z 5s infinite linear;
@@ -80,8 +63,6 @@
   100% { transform: rotateZ(360deg); }
 }
 
-
-
 .rotate-group span {
   padding: 1px 0;
   opacity: 0.2;
@@ -98,6 +79,7 @@
 
 
 /* MODAL */
+
 .modal, .my-code { display: none; }
 
 .m-backdrop {
@@ -143,7 +125,6 @@
   color: #31374F;
 }
 
-/*.modal-text ol { list-style: none; margin: 0 auto; }*/
 .modal-text ol { margin: 20px 60px; }
 .modal-text ol li { text-align: left; line-height: 26px; }
 
@@ -197,13 +178,13 @@
 /* 3D with axes */
 
 #logo {
-  -webkit-perspective: 800px;
+  -webkit-perspective: 400px;
   perspective: 400px;
 }
 
 #cube, #front, #back {
-  height: 120;
-  width: 120;
+  height: 120px;
+  width: 120px;
 }
 
 #cube {
@@ -213,20 +194,20 @@
   transform: rotateX(0) rotateY(0) rotateZ(0);
 }
 
-#front {
+#front, #back {
   position: absolute;
   -webkit-backface-visibility: visible;
-  -webkit-transform: translateZ(100px);
   backface-visibility: visible;
-  transform:  translateZ(50px);
+}
+
+#front {
+  -webkit-transform: translateZ(100px);
+  transform: translateZ(50px);
 }
 
 #back {
-  position: absolute;
-  -webkit-backface-visibility: visible;
   -webkit-transform: rotateY(180deg) translateZ(100px);
-  backface-visibility: visible;
-  transform:  rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 #cube:hover {
@@ -235,7 +216,29 @@ animation: animate-y 5s infinite linear;
 }
 
 #cube:hover #xaxis, #cube:hover #yaxis, #cube:hover #zaxis { opacity: 1; }
-#xaxis, #yaxis, #zaxis { opacity: 0.2; }
+
+#cube {
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  background: rgba(0, 0, 80, 0.5);
+  text-decoration: none;
+  -webkit-transform: rotate(0, 0, 0);
+  -moz-transform: rotate(0, 0, 0);
+  -ms-transform: rotate(0, 0, 0);
+  -o-transform: rotate(0, 0, 0);
+  transform: rotate(0, 0, 0);
+  background-image: url("octocat-white-120.png");
+  background-blend-mode: luminosity;
+}
+
+#cube, #xaxis, #yaxis, #zaxis {
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
 
 #xaxis, #yaxis, #zaxis {
   opacity: 0.2;
@@ -243,11 +246,6 @@ animation: animate-y 5s infinite linear;
   display: block;
   position: absolute;
   height: 2px;
-  -moz-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
 #xaxis {
@@ -286,32 +284,6 @@ animation: animate-y 5s infinite linear;
   left: 50%;
 }
 
-
-#cube {
-  display: block;
-  position: relative;
-  margin: 30px auto;
-  height: 120px;
-  width: 120px;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
-  transform-style: preserve-3d;
-  transform: rotateX(0) rotateY(0) rotateZ(0);
-  background: rgba(0, 0, 80, 0.5);
-  text-decoration: none;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
-  -moz-transform: rotateX(0) rotateY(0) rotateZ(0);
-  -ms-transform: rotateX(0) rotateY(0) rotateZ(0);
-  -o-transform: rotateX(0) rotateY(0) rotateZ(0);
-  transform: rotateX(0) rotateY(0) rotateZ(0);
-  background-image: url("octocat-white-120.png");
-  background-blend-mode:luminosity;
-}
 
 
 pre { font-size: 0.9em; }
