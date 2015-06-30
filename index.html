@@ -148,7 +148,15 @@
         <div class="m-backdrop"></div>
         <div class="m-content">
           <span class="modal-close">&times;</span>
-          <div class="modal-text">w00t!</div>
+          <div class="modal-text">
+            How to close:
+            <ol>
+              <li>Click <span class="text-close">&times;</span> at top right corner</li>
+              <li>Click on backdrop</li>
+              <li>Press close <strong>modal button</strong> below</li>
+              <li>Press ESC</li>
+            </ol>
+          </div>
           <button class="my-button-dark modal-button">close modal</button>
         </div>
       </div>
@@ -190,12 +198,21 @@
     $(".modal").css("display", "block");
   });
 
-  $(".modal").on("click", ".modal-close", function () {
+  $(".modal-close").on("click", function () {
     $(".modal").css("display", "none");
   });
 
-  $(".modal").on("click", ".modal-button", function () {
+  $(".modal-button").on("click", function () {
     $(".modal").css("display", "none");
+  });
+
+  $(".modal").on("click", ".m-backdrop", function () {
+    $(".modal").css("display", "none");
+  });
+
+  $(document).on("keyup", function (event) {
+    var code = event.keyCode || event.which;
+    if (code == 27) { $(".modal").css("display", "none"); }
   });
 
   function toggleVal(val) {

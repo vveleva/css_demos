@@ -134,13 +134,23 @@
 }
 
 .modal-close:hover { color: gray; }
+.text-close {
+  color: gray;
+  font-size: 27px;
+  font-weight: bold;
+}
+
 .modal-text {
   text-align: center;
   width: inherit;
-  font-size: 40px;
-  padding-top: 70px;
+  font-size: 20px;
+  padding-top: 30px;
   color: #31374F;
 }
+
+/*.modal-text ol { list-style: none; margin: 0 auto; }*/
+.modal-text ol { margin: 20px 60px; }
+.modal-text ol li { text-align: left; line-height: 26px; }
 
 .my-button-dark {
   padding: 10px;
@@ -175,8 +185,10 @@
 .modal-button {
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   transform: translateX(-50%);
-  padding: 20px;
-  font-size: 28px;
+  /*padding: 20px;*/
+  /*font-size: 28px;*/
 }
