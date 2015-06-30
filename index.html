@@ -283,9 +283,12 @@
       perspective: 400px;
     }
 
-    #cube {
+    #cube, #front, #back {
       height: 120;
       width: 120;
+    }
+
+    #cube {
       -webkit-transform-style: preserve-3d;
       -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
       transform-style: preserve-3d;
@@ -306,8 +309,6 @@
 
     #front {
       position: absolute;
-      height: 120;
-      width: 120;
       -webkit-backface-visibility: visible;
       -webkit-transform: translateZ(100px);
       backface-visibility: visible;
@@ -316,8 +317,6 @@
 
     #back {
       position: absolute;
-      height: 120;
-      width: 120;
       -webkit-backface-visibility: visible;
       -webkit-transform: rotateY(180deg) translateZ(100px);
       backface-visibility: visible;

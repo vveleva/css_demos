@@ -197,30 +197,38 @@
 /* 3D with axes */
 
 #logo {
-  -webkit-perspective: 800px;   perspective: 400px;
+  -webkit-perspective: 800px;
+  perspective: 400px;
+}
+
+#cube, #front, #back {
+  height: 120;
+  width: 120;
 }
 
 #cube {
-  height: 120;  width: 120;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
   transform-style: preserve-3d;
   transform: rotateX(0) rotateY(0) rotateZ(0);
 }
+
 #front {
-  position: absolute;  height: 120;  width: 120;
+  position: absolute;
   -webkit-backface-visibility: visible;
-  -webkit-transform:  translateZ(100px);
+  -webkit-transform: translateZ(100px);
   backface-visibility: visible;
   transform:  translateZ(50px);
 }
+
 #back {
-  position: absolute;  height: 120;  width: 120;
+  position: absolute;
   -webkit-backface-visibility: visible;
-  -webkit-transform:  rotateY(180deg) translateZ(100px);
+  -webkit-transform: rotateY(180deg) translateZ(100px);
   backface-visibility: visible;
   transform:  rotateY(180deg) translateZ(50px);
 }
+
 #cube:hover {
 -webkit-animation: animate-y 5s infinite linear;
 animation: animate-y 5s infinite linear;
