@@ -196,13 +196,11 @@
 
 /* 3D with axes */
 
-#logos {
-  /*position:absolute;  top: 0px;  left: 150px;*/
+#logo {
   -webkit-perspective: 800px;   perspective: 400px;
-
 }
+
 #cube {
-  /*display: block;  position: relative;  margin: 30px auto;*/
   height: 120;  width: 120;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
@@ -308,4 +306,4 @@ animation: animate-y 5s infinite linear;
 }
 
 
-pre { font-size: 0.9em;}
+pre { font-size: 0.9em; }
