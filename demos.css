@@ -134,11 +134,6 @@
 }
 
 .modal-close:hover { color: gray; }
-.text-close {
-  color: gray;
-  font-size: 27px;
-  font-weight: bold;
-}
 
 .modal-text {
   text-align: center;
@@ -189,8 +184,13 @@
   padding-left: 50px;
   padding-right: 50px;
   transform: translateX(-50%);
-  /*padding: 20px;*/
-  /*font-size: 28px;*/
+}
+
+.demo-button {
+  padding: 70px;
+  margin: 0 90px;
+  border: 2px dashed white;
+  border-radius: 5px;
 }
 
 
@@ -198,7 +198,7 @@
 
 #logos {
   /*position:absolute;  top: 0px;  left: 150px;*/
-  -webkit-perspective: 800px;   perspective: 800px;
+  -webkit-perspective: 800px;   perspective: 400px;
 
 }
 #cube {
@@ -214,82 +214,72 @@
   -webkit-backface-visibility: visible;
   -webkit-transform:  translateZ(100px);
   backface-visibility: visible;
-  transform:  translateZ(100px);
+  transform:  translateZ(50px);
 }
 #back {
   position: absolute;  height: 120;  width: 120;
   -webkit-backface-visibility: visible;
   -webkit-transform:  rotateY(180deg) translateZ(100px);
   backface-visibility: visible;
-  transform:  rotateY(180deg) translateZ(100px);
+  transform:  rotateY(180deg) translateZ(50px);
 }
 #cube:hover {
 -webkit-animation: animate-y 5s infinite linear;
 animation: animate-y 5s infinite linear;
 }
 
-#xaxis {
+#cube:hover #xaxis, #cube:hover #yaxis, #cube:hover #zaxis { opacity: 1; }
+#xaxis, #yaxis, #zaxis { opacity: 0.2; }
+
+#xaxis, #yaxis, #zaxis {
+  opacity: 0.2;
+  width: 240px;
+  display: block;
+  position: absolute;
+  height: 2px;
   -moz-transform-style: preserve-3d;
-  -moz-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   -webkit-transform-style: preserve-3d;
-  -webkit-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   -ms-transform-style: preserve-3d;
-  -ms-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   -o-transform-style: preserve-3d;
-  -o-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   transform-style: preserve-3d;
+}
+
+#xaxis {
+  -moz-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
+  -webkit-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
+  -ms-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
+  -o-transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   transform: translate(-50%, -50%) translate3d(0px, 0, 0);
   border-bottom: black 1px solid;
   color: blue;
-  width: 240px;
-  display: block;
-  position: absolute;
   top: 50%;
   left: 50%;
-  height: 2px;
 }
 
 #yaxis {
-  -moz-transform-style: preserve-3d;
   -moz-transform: rotateZ(-90deg) translate(-50%, -50%) translate3d(0, 0, 0px);
-  -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateZ(-90deg) translate(-50%, -50%) translate3d(0, 0, 0px);
-  -ms-transform-style: preserve-3d;
   -ms-transform: rotateZ(-90deg) translate(-50%, -50%) translate3d(0, 0, 0px);
-  -o-transform-style: preserve-3d;
   -o-transform: rotateZ(-90deg) translate(-50%, -50%) translate3d(0, 0, 0px);
-  transform-style: preserve-3d;
   transform: rotateZ(-90deg) translate(-50%, -50%) translate3d(0, 0, 0px);
   border-bottom: green 1px solid;
   color: green;
-  width: 240px;
-  display: block;
-  position: absolute;
   top: -50%;
   right: -50%;
-  height: 2px;
 }
 
 #zaxis {
-  -moz-transform-style: preserve-3d;
   -moz-transform: rotateY(90deg) translate3d(0, 0, -120px);
-  -ms-transform-style: preserve-3d;
   -ms-transform: rotateY(90deg) translate3d(0, 0, -120px);
-  -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateY(90deg) translate3d(0, 0, -120px);
-  -o-transform-style: preserve-3d;
   -o-transform: rotateY(90deg) translate3d(0, 0, -120px);
-  transform-style: preserve-3d;
   transform: rotateY(90deg) translate3d(0, 0, -120px);
   border-bottom: red 1px solid;
   color: red;
-  width: 240px;
-  display: block;
-  position: absolute;
   top: 50%;
   left: 50%;
-  height: 2px;
 }
+
 
 #cube {
   display: block;
@@ -316,3 +306,6 @@ animation: animate-y 5s infinite linear;
   background-image: url("octocat-white-120.png");
   background-blend-mode:luminosity;
 }
+
+
+pre { font-size: 0.9em;}

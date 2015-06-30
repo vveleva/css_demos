@@ -142,7 +142,9 @@
   <section id="modal" class="blue">
     <div class="content">
       <h2 class="margin-40">Modal</h2>
-      <button class="my-button-light show-modal">show modal</button>
+      <div class="demo-button">
+        <button class="my-button-light show-modal">show modal</button>
+      </div>
 
       <div class="modal">
         <div class="m-backdrop"></div>
@@ -164,25 +166,82 @@
       <br><br><br>
       <button class="toggle-code my-button-light">show code</button>
       <div class="my-code">
+      HTML:
+      <pre><code class="language-markup">
+  &lt;button class="show-modal"&gt;show modal&lt;/button&gt;
+
+  &lt;div class="modal"&gt;&lt;/div&gt;
+    &lt;div class="m-backdrop"&gt;&lt;/div&gt;
+    &lt;div class="m-content"&gt;
+      &lt;span class="modal-close"&gt;&times;&lt;/span&gt;
+      &lt;!-- modal content goes here... --&gt;
+      &lt;button class="modal-button"&gt;close modal&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
+        <br><br>
       CSS:
       <pre><code class="language-css">
-    .rotate-x {
-      perspective: 300px;
-      -webkit-animation: animate-x 5s infinite linear;
-      animation: animate-x 5s infinite linear;
-    }
+  .modal { display: none; }
 
-    @-webkit-keyframes animate-x {
-      0%   { -webkit-transform: rotateX(0); }
-      100% { -webkit-transform: rotateX(360deg); }
-    }
+  .m-backdrop {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 
-    @keyframes animate-x {
-      0%   { transform: rotateX(0); }
-      100% { transform: rotateX(360deg); }
-    }
+  .m-content {
+    background-color: #f0f0f0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
 
-    /* same for y and z */</code></pre>
+  .modal-close {
+    position: absolute;
+    top: 0px;
+    right: 7px;
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+    color: lightgray;
+  }
+
+  .modal-close:hover { color: gray; }</code></pre>
+
+        <br><br>
+      CSS:
+      <pre><code class="language-javascript">
+  // open modal
+  $(".show-modal").on("click", function () {
+    $(".modal").css("display", "block");
+  });
+
+  // close modal
+  $(".modal-close").on("click", function () {
+    $(".modal").css("display", "none");
+  });
+
+  $(".modal-button").on("click", function () {
+    $(".modal").css("display", "none");
+  });
+
+  $(".modal").on("click", ".m-backdrop", function () {
+    $(".modal").css("display", "none");
+  });
+
+  $(document).on("keyup", function (event) {
+    var code = event.keyCode || event.which;
+    if (code == 27) { $(".modal").css("display", "none"); }
+  });</code></pre>
   </div>
     <br><br><br>
 
@@ -204,7 +263,7 @@
     </div>
 
       <br><br><br>
-      <button class="toggle-code my-button-light">show code</button>
+      <button class="toggle-code my-button-dark">show code</button>
       <div class="my-code">
       CSS:
       <pre><code class="language-css">
