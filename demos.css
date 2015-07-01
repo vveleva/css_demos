@@ -360,12 +360,12 @@ pre { font-size: 0.9em; }
 #box .top { line-height: 76px; }
 
 
-#box .front  { background: hsla( 000, 100%, 50%, 0.7 ); }
-#box .back   { background: hsla( 160, 100%, 50%, 0.7 ); }
-#box .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
-#box .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
-#box .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
-#box .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
+#box .front  { background: hsla( 160, 100%, 50%, 0.7 ); }
+#box .back   { background: hsla( 000, 100%, 50%, 0.7 ); }
+#box .left   { background: hsla( 120, 100%, 50%, 0.7 ); }
+#box .right  { background: hsla( 180, 100%, 50%, 0.7 ); }
+#box .bottom { background: hsla( 240, 100%, 50%, 0.7 ); }
+#box .top    { background: hsla( 300, 100%, 50%, 0.7 ); }
 
 #box .front  {
   -webkit-transform: translateZ( 48px );
