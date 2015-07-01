@@ -42,9 +42,9 @@
         <a href="#rotate-with-p">Rotation (with perspective)</a> <br>
         <a href="#modal">Modal</a> <br>
         <a href="#3d-rotation">3D Rotation</a> <br>
+        <a href="#3d-box">3D Box</a> <br>
       </p>
     </div>
-
 	</section>
 
 	<section id="examples rotate-no-p" class="blue">
@@ -242,7 +242,7 @@
       <div id="logo">
         <div id="cube">
           <img src="octocat-black-120.png" id="front">
-          <img src="octocat-black-120.png" id="back">
+          <img src="octocat-red-120.png" id="back">
           <span id="xaxis">x</span>
           <span id="yaxis">y</span>
           <span id="zaxis">z</span>
@@ -291,6 +291,59 @@
 
     #front { transform: translateZ(50px); }
     #back { transform: rotateY(180deg) translateZ(50px); }</code></pre>
+  </div>
+    <br><br><br>
+
+		</div>
+	</section>
+
+
+  <section id="3d-box" class="blue">
+    <div class="content">
+      <h2 class="margin-40">3D box</h2>
+
+			<div class="container">
+
+		    <div id="box">
+		      <span class="front">1</span>
+		      <span class="back">2</span>
+		      <span class="right">3</span>
+		      <span class="left">4</span>
+		      <span class="top">5</span>
+		      <span class="bottom">6</span>
+		    </div>
+
+			</div>
+
+		    <p id="show-buttons">
+		      <button class="show-front">1</button>
+		      <button class="show-back">2</button>
+		      <button class="show-right">3</button>
+		      <button class="show-left">4</button>
+		      <button class="show-top">5</button>
+		      <button class="show-bottom">6</button>
+		    </p>
+
+	    <p>
+	      <button id="toggle-backface-visibility" class="my-button-light">
+					Toggle Visibility
+				</button>
+	    </p>
+			<script src="./js/utils.js"></script>
+			<script src="./js/rotate-box.js"></script>
+
+      <br><br><br>
+      <button class="toggle-code my-button-dark">show code</button>
+      <div class="my-code">
+      HTML:
+      <pre><code class="language-markup">
+    &lt;div id="logo"&gt;
+      &lt;div id="cube"&gt;
+        &lt;img src="your-image.png" id="front"&gt;
+        &lt;img src="your-image.png" id="back"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
   </div>
     <br><br><br>
 
