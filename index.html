@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="./main.css"/>
 	<link rel="stylesheet" type="text/css" href="./demos.css"/>
 	<link rel="stylesheet" type="text/css" href="./3d-box.css"/>
+	<link rel="stylesheet" type="text/css" href="./emboss.css"/>
   <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -45,6 +46,7 @@
         <a href="#3d-rotation">3D Rotation</a> <br>
         <a href="#3d-box">3D Box</a> <br>
         <a href="#flip-card">Flip Card</a> <br>
+        <a href="#emboss">3D Bevel Emboss</a> <br>
       </p>
     </div>
 	</section>
@@ -334,6 +336,18 @@
 			<script src="./js/utils.js"></script>
 			<script src="./js/rotate-box.js"></script>
 
+
+			<div class="wrap">
+			  <div class="cube">
+			    <div class="front">1</div>
+			    <div class="back">2</div>
+			    <div class="top">3</div>
+			    <div class="bottom">4</div>
+			    <div class="left">5</div>
+			    <div class="right">6</div>
+			  </div>
+			</div>
+
 		</div>
 	</section>
 
@@ -350,13 +364,46 @@
 			</div>
 
 
-	    <p>
+	    <!-- <p>
 	      <button id="flip" class="my-button-dark"> Flip </button>
 	    </p>
-			<script src="./js/flip.js"></script>
+			<script src="./js/flip.js"></script> -->
 
 		</div>
 	</section>
+
+  <section id="emboss" class="blue">
+    <div class="content">
+      <h2 class="margin-40">3D Bevel Emboss</h2>
+
+			<div class='stage'>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			  <div class='layer'></div>
+			</div>
+		</div>
+	</section>
+
+
+
 
 </body>
 </html>

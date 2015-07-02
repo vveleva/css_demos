@@ -85,10 +85,7 @@
 .m-backdrop {
   background-color: rgba(0, 0, 0, .5);
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 1;
 }
 
@@ -295,11 +292,9 @@ pre { font-size: 0.9em; }
   height: 130px;
   width: 130px;
   outline: none;
-  border: 2px dashed rgba(49, 55, 79, 0.2);
+  border: 2px dashed rgba(49, 55, 79, 0.5);
   padding: 3px;
 }
-
-#flip-card .container:hover { border-color: #31374F; }
 
 #card {
   width: 120px;
@@ -359,7 +354,7 @@ pre { font-size: 0.9em; }
 #card .front { color: black; }
 #card .back { color: cornflowerblue; }
 
-#card.flipped {
+#card:hover {
   -webkit-transform: translateX( -100% ) rotateY( -180deg );
   -moz-transform: translateX( -100% ) rotateY( -180deg );
   -o-transform: translateX( -100% ) rotateY( -180deg );

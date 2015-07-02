@@ -47,23 +47,10 @@
           backface-visibility: hidden;
 }
 
-#box .front, #box .back {
-  width: 296px;
-  height: 196px;
-}
-
-#box .right, #box .left {
-  width: 96px;
-  height: 196px;
-  left: 100px;
-}
-
-#box .top, #box .bottom {
-  width: 296px;
-  height: 96px;
-  top: 50px;
-  line-height: 96px;
-}
+#box .front, #box .back, #box .top, #box .bottom { width: 296px; }
+#box .front, #box .back, #box .right, #box .left { height: 196px; }
+#box .right, #box .left { width: 96px; left: 100px; }
+#box .top, #box .bottom { height: 96px; top: 50px; line-height: 96px; }
 
 #box .top { line-height: 76px; }
 
@@ -111,7 +98,6 @@
        -o-transform: rotateX(  -90deg ) translateZ( 98px );
           transform: rotateX(  -90deg ) translateZ( 98px );
 }
-
 
 #box.show-front {
   -webkit-transform: translateZ(  -48px );
@@ -164,3 +150,97 @@
 
 #show-buttons button:hover { color: cornflowerblue; cursor: pointer; }
 #show-buttons button:focus, .my-button-dark:focus { outline: none; }
+
+
+
+
+/* rotating cube */
+
+
+.wrap {
+  margin-left: 180px;
+  margin-top: 180px;
+  height: 400px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+.wrap .cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.wrap .cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.wrap .front { transform: translateZ(100px); }
+.wrap .back { transform: translateZ(-100px) rotateY(180deg); }
+
+.wrap .right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.wrap .left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.wrap .top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.wrap .bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.wrap .cube { animation: rotate 20s infinite linear; }
+.wrap:hover .front { transform: translateZ(200px); }
+.wrap:hover .back { transform: translateZ(-200px) rotateY(180deg); }
+
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.wrap .cube > div { transition: transform 0.2s ease-in; }
+
+.wrap .front  { background: hsla( 160, 100%, 50%, 0.7 ); }
+.wrap .back   { background: hsla( 000, 100%, 50%, 0.7 ); }
+.wrap .left   { background: hsla( 120, 100%, 50%, 0.7 ); }
+.wrap .right  { background: hsla( 180, 100%, 50%, 0.7 ); }
+.wrap .bottom { background: hsla( 240, 100%, 50%, 0.7 ); }
+.wrap .top    { background: hsla( 300, 100%, 50%, 0.7 ); }
+
+.wrap .cube > div:hover {
+  background-color: cornflowerblue;
+  border: none;
+  outline: 2px dashed cornflowerblue;
+}

@@ -6,7 +6,8 @@
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
 
 .blue {
   background: #31374F;
