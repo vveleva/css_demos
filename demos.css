@@ -360,3 +360,150 @@ pre { font-size: 0.9em; }
   -o-transform: translateX( -100% ) rotateY( -180deg );
   transform: translateX( -100% ) rotateY( -180deg );
 }
+
+
+
+/* flip up/down left/right */
+.card-container {
+    margin: 0 25px;
+    width: 220px;
+    height: 160px;
+    border: 2px dashed rgba(49, 55, 79, 0.5);
+    border-radius: 5px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/* flip class added with javascript on click */
+.card-container.flip .front {
+    /* For IE10 you have to animate each face separately. */
+    /* Isnt great on low end devices because */
+    /* they can animate at different times */
+    /* IE9 does not support CSS animations */
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.card-container.flip .back {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.card .front,
+.card .back {
+    margin: -2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: 5px;
+    background-color: #4472b9;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.card .front {
+    /* z-index so front card stays above back */
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.card .back {
+    background-color: #be4c39;
+    /* back, initially hidden */
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+
+/* vertical flip */
+
+.card.vertical .front { background-color: #4ca454; }
+
+.card.vertical .back { background-color: #9351a6; }
+
+.card.vertical .back {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.card-container.flip .vertical .front {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.card-container.flip .vertical .back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+
+.card-container h2 {
+  color: white;
+  line-height: 110px;
+}
+
+.card .icon { background-repeat: no-repeat; }
+
+.card .front .icon {
+  color: white;
+  background-image: url("glyphicons/white/glyphicons-224-chevron-right.png");
+  margin: 0 auto;
+  width: 15px;
+  height: 22px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card .back .icon {
+  color: white;
+  background-image: url("glyphicons/white/glyphicons-225-chevron-left.png");
+  margin: 0 auto;
+  width: 15px;
+  height: 22px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card.vertical .front .icon {
+  color: white;
+  background-image: url("glyphicons/white/glyphicons-602-chevron-down.png");
+  margin: 0 auto;
+  width: 22px;
+  height: 15px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card.vertical .back .icon {
+  color: white;
+  background-image: url("glyphicons/white/glyphicons-601-chevron-up.png");
+  margin: 0 auto;
+  width: 22px;
+  height: 15px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
