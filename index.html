@@ -50,6 +50,7 @@
         <a href="#flip-card">Flip Card</a> <br>
         <a href="#emboss">3D Bevel Emboss</a> <br>
         <a href="#css-content">Content (::before / ::after)</a> <br>
+        <a href="#clearfix">Clearfix</a> <br>
       </p>
     </div>
 	</section>
@@ -452,20 +453,20 @@
 			<br><br>
 			CSS:
       <pre><code class="language-css">
-.example {
-  color: white;
-  background-color: tomato;
-}
+	.example {
+	  color: white;
+	  background-color: tomato;
+	}
 
-.example::before {
-  content: '::before';
-  background-color: cornflowerblue;
-}
+	.example::before {
+	  content: '::before';
+	  background-color: cornflowerblue;
+	}
 
-.example::after {
-  content: '::after';
-  background-color: mediumseagreen;
-}</code></pre>
+	.example::after {
+	  content: '::after';
+	  background-color: mediumseagreen;
+	}</code></pre>
 			</div>
 
 			<br><br><br><br>
@@ -487,13 +488,13 @@
 			<br><br>
 			CSS:
       <pre><code class="language-css">
-.example::before {
-  content: attr(memo);
-}
+	.example::before {
+	  content: attr(memo);
+	}
 
-.example::after {
-	content: attr(href);
-}</code></pre>
+	.example::after {
+		content: attr(href);
+	}</code></pre>
 			</div>
 
 			<br><br><br><br>
@@ -513,34 +514,86 @@
 			<br><br>
 			CSS:
       <pre><code class="language-css">
-.example::before {
-  content: attr(title);
-  background-color: cornflowerblue;
-  top: -60px;
-  transform: translateX(-50%);
-  border-radius: 5px;
-}
+	.example::before {
+	  content: attr(title);
+	  background-color: cornflowerblue;
+	  top: -60px;
+	  transform: translateX(-50%);
+	  border-radius: 5px;
+	}
 
-.example::after {
-  content: "";
-  background-color: cornflowerblue;
-  top: -30px;
-  transform: rotateZ(45deg);
-  left: 50%;
-  width: 20px;
-  height: 20px;
-}</code></pre>
+	.example::after {
+	  content: "";
+	  background-color: cornflowerblue;
+	  top: -30px;
+	  transform: rotateZ(45deg);
+	  left: 50%;
+	  width: 20px;
+	  height: 20px;
+	}</code></pre>
   		</div>
 			<br><br><br>
 
 		</div>
 	</section>
 
-  <section id="emboss" class="white">
+  <section id="clearfix" class="white">
     <div class="content">
 			<br><br>
-			<h2 class="margin-40">Something</h2>
+			<h2 class="margin-40">Clearfix</h2>
+			<br>
+
+			No clearfix
 			<br><br><br>
+
+			<ul class="clearfix-css">
+	      <li>One</li>
+	      <li>Two</li>
+	      <li>Three</li>
+	      <li>Four</li>
+	    </ul>
+
+			<br><br><br><br><br><br>
+
+			With clearfix
+			<br><br><br>
+
+			<ul class="clearfix-css clearfix">
+	      <li>One</li>
+	      <li>Two</li>
+	      <li>Three</li>
+	      <li>Four</li>
+	    </ul>
+
+			<br><br>
+			<button class="toggle-code my-button-dark">show code</button>
+      <div class="my-code">
+			HTML:
+      <pre><code class="language-markup">
+  &lt;ul class="clearfix"&gt;
+    &lt;li&gt;One&lt;/li&gt;
+    &lt;li&gt;Two&lt;/li&gt;
+    &lt;li&gt;Three&lt;/li&gt;
+    &lt;li&gt;Four&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+
+			<br><br>
+			CSS:
+      <pre><code class="language-css">
+	li {
+  float: left;
+  margin: 10px;
+  background: green;
+  padding: 20px;
+  color: white;
+	}
+
+	.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+	}</code></pre>
+  		</div>
 
 		</div>
 	</section>

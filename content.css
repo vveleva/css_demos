@@ -87,3 +87,35 @@ a::after, a::before {
   transform: rotateZ(45deg);
   background-color: cornflowerblue;
 }
+
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul.clearfix-css {
+  border: 2px dashed rgba(49, 55, 79, 0.5);
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.clearfix-css li {
+  float: left;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: cornflowerblue;
+  padding: 20px;
+  width: calc(25% - 20px);
+  text-align: center;
+  border-radius: 4px;
+}
+
+.clearfix-css li:hover {
+  background-color: #3C6FCC;
+  cursor: pointer;
+}
