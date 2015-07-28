@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="./demos.css"/>
 	<link rel="stylesheet" type="text/css" href="./3d-box.css"/>
 	<link rel="stylesheet" type="text/css" href="./emboss.css"/>
+	<link rel="stylesheet" type="text/css" href="./content.css"/>
   <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -48,13 +49,16 @@
         <a href="#3d-box">3D Box</a> <br>
         <a href="#flip-card">Flip Card</a> <br>
         <a href="#emboss">3D Bevel Emboss</a> <br>
+        <a href="#css-content">Content (::before / ::after)</a> <br>
       </p>
     </div>
 	</section>
 
 	<section id="examples rotate-no-p" class="blue">
 		<div class="content">
-      <h2 class="margin-40">Rotate (no perspective)</h2>
+			<br><br>
+			<h2 class="margin-40">Rotate (no perspective)</h2>
+			<br><br><br>
 
       <div class="rotate-group">
         <div class="cube">
@@ -92,7 +96,9 @@
 
   <section id="rotate-with-p" class="white">
 		<div class="content">
-      <h2 class="margin-40">Rotate (with perspective)</h2>
+			<br><br>
+			<h2 class="margin-40">Rotate (with perspective)</h2>
+			<br><br><br>
       <p>perspective: 300px</p>
       <div class="rotate-group">
         <div class="cube perspective">
@@ -133,7 +139,9 @@
 
   <section id="modal" class="blue">
     <div class="content">
-      <h2 class="margin-40">Modal</h2>
+			<br><br>
+			<h2 class="margin-40">Modal</h2>
+			<br><br><br>
       <div class="demo-button">
         <button class="my-button-light show-modal">open modal</button>
       </div>
@@ -242,7 +250,9 @@
 
   <section id="3d-rotation" class="white">
     <div class="content">
-      <h2 class="margin-40">3D rotation</h2>
+			<br><br>
+			<h2 class="margin-40">3D rotation</h2>
+			<br><br><br>
 
       <div id="logo">
         <div id="cube">
@@ -305,7 +315,9 @@
 
   <section id="3d-box" class="blue">
     <div class="content">
-      <h2 class="margin-40">3D box</h2>
+			<br><br>
+			<h2 class="margin-40">3D box</h2>
+			<br><br><br>
 
 			<div class="container">
 
@@ -361,7 +373,9 @@
 
   <section id="flip-card" class="white">
     <div class="content">
-      <h2 class="margin-40">Flip Card</h2>
+			<br><br>
+			<h2 class="margin-40">Flip Card</h2>
+			<br><br><br>
 
 			<div class="card-container">
 		    <div class="card">
@@ -414,9 +428,93 @@
 		</div>
 	</section>
 
+  <section id="css-content" class="blue">
+    <div class="content">
+			<br><br>
+			<h2 class="margin-40">Content</h2>
+			<br><br><br>
+
+			<a class="before-after" href="#" note="#">
+	      <!-- What <b>::before</b> and <b>::after</b> elements look like. -->
+				Use <b>content: "";</b> with <b>::before</b> and <b>::after</b> pseudo-elements to get them to show up.
+	    </a>
+
+			<br>
+      <button class="toggle-code my-button-light">show code</button>
+      <div class="my-code">
+			HTML:
+      <pre><code class="language-markup">
+				&lt;div class="example"&gt;
+					 ::before
+					 &lt;!-- HTML code goes here --&gt;
+					 ::after
+				&lt;/div&gt;</code></pre>
+
+			<br><br>
+			CSS:
+      <pre><code class="language-css">
+.example {
+  color: white;
+  background-color: tomato;
+}
+
+.example::before {
+  content: '::before';
+  background-color: cornflowerblue;
+}
+
+.example::after {
+  content: '::after';
+  background-color: mediumseagreen;
+}</code></pre>
+			</div>
+
+			<br><br><br>
+			<a class="before-after href-content" href="http://vveleva.com/css_demos/" memo="Anything you like!">
+				You can use <b>attr()</b> to pull values from your html tags.
+			</a>
+
+			<br>
+      <button class="toggle-code my-button-light">show code</button>
+      <div class="my-code">
+			HTML:
+      <pre><code class="language-markup">
+				&lt;a class="example"
+				     href="http://vveleva.com/css_demos/"
+				     memo="Anything you like!"&gt;
+					  &lt;!-- HTML code goes here --&gt;
+				&lt;/a&gt;</code></pre>
+
+			<br><br>
+			CSS:
+      <pre><code class="language-css">
+.example::before {
+  content: attr(memo);
+}
+
+.example::after {
+	content: attr(href);
+}</code></pre>
+			</div>
+			<br><br><br>
+
+		</div>
+	</section>
+
+  <section id="emboss" class="white">
+    <div class="content">
+			<br><br>
+			<h2 class="margin-40">Something</h2>
+			<br><br><br>
+
+		</div>
+	</section>
+
   <section id="emboss" class="blue">
     <div class="content">
-      <h2 class="margin-40">3D Bevel Emboss</h2>
+			<br><br>
+			<h2 class="margin-40">3D Bevel Emboss</h2>
+			<br><br><br>
 
 			<div class='stage'>
 			  <div class='layer'></div>
