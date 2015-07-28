@@ -434,8 +434,7 @@
 			<h2 class="margin-40">Content</h2>
 			<br><br><br>
 
-			<a class="before-after" href="#" note="#">
-	      <!-- What <b>::before</b> and <b>::after</b> elements look like. -->
+			<a class="before-after" href="#css-content">
 				Use <b>content: "";</b> with <b>::before</b> and <b>::after</b> pseudo-elements to get them to show up.
 	    </a>
 
@@ -469,7 +468,7 @@
 }</code></pre>
 			</div>
 
-			<br><br><br>
+			<br><br><br><br>
 			<a class="before-after href-content" href="http://vveleva.com/css_demos/" memo="Anything you like!">
 				You can use <b>attr()</b> to pull values from your html tags.
 			</a>
@@ -496,6 +495,42 @@
 	content: attr(href);
 }</code></pre>
 			</div>
+
+			<br><br><br><br>
+			<a class="before-after tooltip" href="#css-content" title="Tooltip box!">
+				Use content to make a tooltip.
+			</a>
+
+			<br>
+      <button class="toggle-code my-button-light">show code</button>
+      <div class="my-code">
+			HTML:
+      <pre><code class="language-markup">
+				&lt;div class="example" title="Tooltip box!"&gt;
+					  &lt;!-- HTML code goes here --&gt;
+				&lt;/div&gt;</code></pre>
+
+			<br><br>
+			CSS:
+      <pre><code class="language-css">
+.example::before {
+  content: attr(title);
+  background-color: cornflowerblue;
+  top: -60px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.example::after {
+  content: "";
+  background-color: cornflowerblue;
+  top: -30px;
+  transform: rotateZ(45deg);
+  left: 50%;
+  width: 20px;
+  height: 20px;
+}</code></pre>
+  		</div>
 			<br><br><br>
 
 		</div>

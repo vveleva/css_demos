@@ -4,7 +4,7 @@ width: 100%;
 padding: 12px 25px;
 border-radius: 20px;
 display: inline-block;
-background-color: tomato;
+background-color: #DA5138;
 color: white;
 text-decoration: none;
 margin-bottom: 20px;
@@ -57,4 +57,33 @@ a::after, a::before {
   left: -15%;
   content: attr(memo);
   background-color: gold;
+}
+
+.before-after.tooltip:hover::before {
+  border: none;
+  content: attr(title);
+  bottom: 75px;
+  height: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 5px;
+  top: -60px;
+}
+
+.before-after.tooltip:hover::after {
+  border: none;
+  content: "";
+  top: -30px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  padding: 0;
+  border-radius: 0;
+  transform: rotateZ(45deg);
+  background-color: cornflowerblue;
 }
