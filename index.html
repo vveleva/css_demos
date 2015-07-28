@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="./3d-box.css"/>
 	<link rel="stylesheet" type="text/css" href="./emboss.css"/>
 	<link rel="stylesheet" type="text/css" href="./content.css"/>
+	<link rel="stylesheet" type="text/css" href="./margin_padding.css"/>
   <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -48,9 +49,9 @@
         <a href="#3d-rotation">3D Rotation</a> <br>
         <a href="#3d-box">3D Box</a> <br>
         <a href="#flip-card">Flip Card</a> <br>
-        <a href="#emboss">3D Bevel Emboss</a> <br>
         <a href="#css-content">Content ( ::before / ::after )</a> <br>
         <a href="#clearfix">Clearfix</a> <br>
+        <a href="#emboss">3D Bevel Emboss</a> <br>
       </p>
     </div>
 	</section>
@@ -470,7 +471,7 @@
 			</div>
 
 			<br><br><br><br>
-			<a class="before-after href-content" href="http://vveleva.com/css_demos/" memo="Anything you like!">
+			<a class="before-after href-content" href="http://vveleva.com/css_demos/#css-content" memo="Anything you like!">
 				You can use <b>attr()</b> to pull values from your html tags.
 			</a>
 
@@ -480,7 +481,7 @@
 			HTML:
       <pre><code class="language-markup">
 				&lt;a class="example"
-				     href="http://vveleva.com/css_demos/"
+				     href="http://vveleva.com/css_demos/#css-content"
 				     memo="Anything you like!"&gt;
 					  &lt;!-- HTML code goes here --&gt;
 				&lt;/a&gt;</code></pre>
@@ -595,6 +596,48 @@
 	}</code></pre>
   		</div>
 			<br><br><br><br><br>
+
+		</div>
+	</section>
+
+  <section id="margin-padding" class="blue">
+    <div class="content">
+			<br><br>
+			<h2 class="margin-40">Margin vs Padding</h2>
+			<br><br><br>
+
+			<ul class="clearfix">
+				<li>
+					<div class="with-margin">
+						<div class="example"> </div>
+					</div>
+				</li>
+
+				<li class="">
+					<div class="with-padding">
+						<div class="example"> </div>
+					</div>
+				</li>
+
+				<li>
+					<div class="with-padding">
+						<div class="both">
+							<div class="example"> </div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<br><br><br><br><br><br>
+
+		</div>
+	</section>
+
+  <section id="sample" class="white">
+    <div class="content">
+			<br><br>
+			<h2 class="margin-40">Sample</h2>
+			<br><br><br>
 
 		</div>
 	</section>

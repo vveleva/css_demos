@@ -1,0 +1,57 @@
+#margin-padding ul {
+  width: 100%;
+}
+
+#margin-padding ul li {
+  padding: 0;
+  margin: 0;
+  width: calc(33% - 30px);
+  float: left;
+  margin: 15px;
+}
+
+#margin-padding ul li > div {
+  display: inline-block;
+  border: 2px dashed white;
+  position: relative;
+}
+
+#margin-padding .example {
+  background-color: #74A1F3;
+  margin: 20px;
+  height: 25px;
+  width: 75px;
+  color: #31374F;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.with-margin .example::before, .with-padding .example::before {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.with-margin .example::before { content: "margin"; }
+
+.with-padding .example::before { content: "padding"; }
+
+.both .example::before { content: "both"; }
+
+
+#margin-padding ul > li > .with-margin { margin: 20px; }
+
+#margin-padding ul > li .with-padding {
+  background-color: cornflowerblue;
+  margin: 20px;
+}
+
+#margin-padding ul > li .both {
+  background-color: cornflowerblue;
+  margin: 0px;
+}
+
+#margin-padding ul > li:last-child {
+  border: 2px dashed white;
+}
