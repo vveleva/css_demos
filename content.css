@@ -48,7 +48,7 @@ a.before-after::after, a.before-after::before {
 .before-after > b { color: #31374F; }
 
 .before-after.href-content:hover::after {
-  left: 70%;
+  left: 65%;
   content: attr(href);
   background-color: lightsteelblue;
 }
